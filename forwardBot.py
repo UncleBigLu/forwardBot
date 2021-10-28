@@ -11,7 +11,7 @@ toGroup = os.environ['toGroup']
 botQQ = os.environ['botQQ']
 action = Action(botQQ)
 
-pattern = r'.*全体成员.*大学习.*'
+pattern = r'^(?=.*全体成员)(?=.*大学习).*$'
 myRe = re.compile(pattern)
 # Message with @全体成员 would cause ctx.Content in the format of a dict.
 # Add a regex to judge if it's a dict and extract message from this dict string.
